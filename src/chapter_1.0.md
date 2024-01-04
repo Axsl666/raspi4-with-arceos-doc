@@ -32,6 +32,10 @@ https://github.com/chenlongos/arceos
 
 ![](assert/主板.png)
 
+小车如下图所示（最上方是一块树莓派主板）：
 
+![](assert/小车.jpg)
 
+树莓派跑ArceOS通过串口控制小车运动：
 
+![](assert/yuan.gif)
