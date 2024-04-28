@@ -11,7 +11,8 @@
    
    * USB转TTL串口线
    
-   * ArceOS代码地址：https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port（注意分支）
+   * ArceOS代码地址：<https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port>（注意分支）
+     
      编译镜像命令：`make A=apps/cli PLATFORM=aarch64-phytium-pi LOG=debug`
    
 2. 飞腾派上电启动，把有ArceOS启动镜像的读卡器或者U盘插到飞腾派上，用串口把飞腾派与电脑相连接，启动电脑上的远程连接软件，如Putty，波特率设置为115200
