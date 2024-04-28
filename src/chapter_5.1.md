@@ -1,6 +1,6 @@
 # 飞腾派参数
 
-![image-20240427150628174](https://github.com/chenlongos/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE%E5%9B%BE%E7%89%87.jpg)
+![image-20240427150628174](assert/飞腾派图片.jpg)
 
 | 名称 | 描述 |
 | ----- | ---- |
@@ -22,7 +22,7 @@
 | GPIO | 最多29个 |
 
 
-![image-20240427150628174](https://github.com/chenlongos/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE.png)
+![](assert/飞腾派.png)
 
 
 
