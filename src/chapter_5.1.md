@@ -1,6 +1,6 @@
 # 飞腾派参数
 
-![image-20240427150628174](C:\Users\张江鹏\AppData\Roaming\Typora\typora-user-images\image-20240427150628174.png)
+![image-20240427150628174](https://github.com/apengaaa/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE%E5%9B%BE%E7%89%87.jpg)
 
 | 名称 | 描述 |
 | ----- | ---- |
@@ -20,6 +20,10 @@
 | SPI | 2路 |
 | CAN | 1路CANFD |
 | GPIO | 最多29个 |
+
+
+![image-20240427150628174](https://github.com/apengaaa/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE.png)
+
 
 
 
