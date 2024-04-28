@@ -3,7 +3,7 @@
 1. 硬件准备：
    * 飞腾派板子
    
-     ![image-20240427150305459](https://github.com/apengaaa/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE%E5%9B%BE%E7%89%87.jpg)
+     ![image-20240427150305459](https://github.com/chenlongos/raspi4-with-arceos-doc/blob/master/src/assert/%E9%A3%9E%E8%85%BE%E6%B4%BE%E5%9B%BE%E7%89%87.jpg)
    
    * 两张SD卡，一张烧录好Ubuntu系统，一张放ArceOS启动镜像（或U盘）
    
