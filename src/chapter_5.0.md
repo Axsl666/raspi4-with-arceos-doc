@@ -3,7 +3,7 @@
 1. 硬件准备：
    * 飞腾派板子
    
-     ![](assret/飞腾派图片.jpg)
+     ![](assert/飞腾派图片.jpg)
    
    * 两张SD卡，一张烧录好Ubuntu系统，一张放ArceOS启动镜像（或U盘）
    
