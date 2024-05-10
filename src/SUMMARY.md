@@ -22,11 +22,29 @@
   - [任务六：USB转串口的设备驱动实现](./chapter_3.6.md)
 - [树莓派参考资料](./chapter_0.0.md)
 
+
+
+
 - [飞腾派学习指南](./chapter_0.1.md)
   - [飞腾派参数](./chapter_5.0.md)
-  - [实验一：飞腾派运行ArceOS](./chapter_5.1.md)
-  - [实验二：ArceOS的I2C驱动](./chapter_5.2.md)
-  - [实验三：ArceOS通过I2C驱动PCA9685模块来驱动电机实现小车行走](./chapter_5.3.md)
+  - [实验：飞腾派运行ArceOS](./chapter_5.1.md)
+- [方向一：飞腾派 USB 驱动](./chapter_0.1.md)
+  - [实验一：PCIe初始化](./chapter_5.3.md)
+  - [实验二：](./chapter_5.3.md)
+  - [实验三：](./chapter_5.3.md)
+  - [实验四：](./chapter_5.3.md)
+  - [实验五：](./chapter_5.3.md)
+- [方向二：飞腾派 I2C 驱动](./chapter_0.1.md)
+  - [实验一：ArceOS的 I2C 驱动实现](./chapter_5.2.md)
+  - [实验二：ArceOS通过 I2C 驱动PCA9685模块](./chapter_5.3.md)
+  - [实验三：驱动小车](./chapter_5.3.md)
+- [进阶方向：颜色追踪](./chapter_0.1.md)
+  - [第一步：摄像头驱动实现](./chapter_5.2.md)
+  - [第二步：颜色识别算法](./chapter_5.3.md)
+  - [第三步：python库的支持](./chapter_5.3.md)
+
+
+
 - [飞腾派参考资料](./chapter_0.00.md) 
   <!-- - [任务零：环境搭建 C语言内核模块的编译和测试](./chapter_3.1.md)
   <!-- - [任务一：R4L e10000 网卡驱动代码内核模块编译](./chapter_3.2.md)
