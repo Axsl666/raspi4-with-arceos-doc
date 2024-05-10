@@ -20,11 +20,14 @@
   - [任务四：xhci检测设备，分配地址空间](./chapter_3.4.md)
   - [任务五：解析设备配置，加载对应驱动](./chapter_3.5.md)
   - [任务六：USB转串口的设备驱动实现](./chapter_3.6.md)
-- [参考资料](./chapter_0.0.md)
+- [树莓派参考资料](./chapter_0.0.md)
 
-
-- [飞腾派参数](./chapter_5.1.md)
-- [飞腾派运行ArceOS](./chapter_5.0.md)
+- [飞腾派学习指南](./chapter_0.1.md)
+  - [飞腾派参数](./chapter_5.0.md)
+  - [实验一：飞腾派运行ArceOS](./chapter_5.1.md)
+  - [实验二：ArceOS的I2C驱动](./chapter_5.2.md)
+  - [实验三：ArceOS通过I2C驱动小车](./chapter_5.3.md)
+- [飞腾派参考资料](./chapter_0.00.md) 
   <!-- - [任务零：环境搭建 C语言内核模块的编译和测试](./chapter_3.1.md)
   <!-- - [任务一：R4L e10000 网卡驱动代码内核模块编译](./chapter_3.2.md)
   <!-- - [任务二：Linux 6.1 + R4L e10000网卡驱动 在 Qemu 中运行](./chapter_3.3.md)
