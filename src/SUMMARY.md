@@ -26,7 +26,7 @@
   - [飞腾派参数](./chapter_5.0.md)
   - [实验一：飞腾派运行ArceOS](./chapter_5.1.md)
   - [实验二：ArceOS的I2C驱动](./chapter_5.2.md)
-  - [实验三：ArceOS通过I2C驱动小车](./chapter_5.3.md)
+  - [实验三：ArceOS通过I2C驱动PCA9685模块来驱动电机实现小车行走](./chapter_5.3.md)
 - [飞腾派参考资料](./chapter_0.00.md) 
   <!-- - [任务零：环境搭建 C语言内核模块的编译和测试](./chapter_3.1.md)
   <!-- - [任务一：R4L e10000 网卡驱动代码内核模块编译](./chapter_3.2.md)
