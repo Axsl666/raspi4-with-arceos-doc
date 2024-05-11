@@ -30,7 +30,7 @@
   - [实验：飞腾派运行ArceOS](./chapter_5.1.md)
 - [方向一：飞腾派 USB 驱动](./chapter_0.1.md)
   - [实验一：PCIe初始化](./chapter_5.3.md)
-  - [实验二：](./chapter_5.3.md)
+  - [实验二：PCIe成功读取xhci控制器](./chapter_5.3.md)
   - [实验三：](./chapter_5.3.md)
   - [实验四：](./chapter_5.3.md)
   - [实验五：](./chapter_5.3.md)
