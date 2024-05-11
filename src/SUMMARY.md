@@ -27,7 +27,7 @@
 
 - [飞腾派学习指南](./chapter_0.1.md)
   - [飞腾派参数](./chapter_5.0.md)
-  - [实验：飞腾派运行ArceOS](./chapter_5.1.md)
+  - [前置实验：飞腾派运行ArceOS](./chapter_5.1.md)
 - [方向一：飞腾派 USB 驱动](./chapter_5.2.md)
   - [PCIe介绍](./chapter_5.3.md)
   - [实验一：PCIe 初始化](./chapter_5.4.md)
