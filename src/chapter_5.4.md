@@ -2,9 +2,9 @@
 
 
 
-## 树莓派Linux中关于 PCIe 部分
+## 飞腾派Linux中关于 PCIe 部分
 
-在树莓派Linux系统中，输入```cat /proc/iomem```，得到如下输出：
+在飞腾派Linux系统中，输入```cat /proc/iomem```，得到如下输出：
 
 ```shell
 pi@raspberrypi:~ $ sudo cat /proc/iomem
