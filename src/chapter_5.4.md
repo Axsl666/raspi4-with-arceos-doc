@@ -87,7 +87,7 @@ user@Phytium-Pi:~$ sudo cat /proc/iomem
 
 ## 接管控制权
 
-1. 加载ArceOS:通过SD卡等引导设备实现
+1. 加载ArceOS：通过SD卡等引导设备实现
 
 2. ArceOS初始化：内核开始初始化硬件和各种子系统。在初始化过程中，会尝试检测和配置已经初始化的PCIe控制器。
 
