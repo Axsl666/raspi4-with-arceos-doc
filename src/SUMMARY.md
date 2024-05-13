@@ -39,7 +39,7 @@
   - [I2C 介绍](./chapter_5.17.md)
   - [实验一：ArceOS的 I2C 驱动实现](./chapter_5.10.md)
   - [实验二：ArceOS通过 I2C 驱动 PCA9685 模块驱动小车](./chapter_5.11.md)
-  <!-- - [实验三：驱动小车](./chapter_5.12.md)
+  
 - [进阶方向：颜色追踪](./chapter_5.13.md)
   - [第一步：摄像头驱动实现](./chapter_5.14.md)
   - [第二步：颜色识别算法](./chapter_5.15.md)
