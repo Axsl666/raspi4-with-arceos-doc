@@ -1,4 +1,4 @@
-# 实验一：PCIe初始化
+# 实验一：PCIe 初始化，接管 PCIe 控制器
 
 PCIe控制器由Uboot初始化。
 
