@@ -36,7 +36,7 @@
   - [实验三：xhci 控制器初始化](./chapter_5.7.md)
   - [实验四：读取 USB 设备](./chapter_5.8.md)
 - [方向二：飞腾派 I2C 驱动](./chapter_5.9.md)
-  - [I2C 介绍](./chapter_5.3.md)
+  - [I2C 介绍](./chapter_5.17.md)
   - [实验一：ArceOS的 I2C 驱动实现](./chapter_5.10.md)
   - [实验二：ArceOS通过 I2C 驱动 PCA9685 模块](./chapter_5.11.md)
   - [实验三：驱动小车](./chapter_5.12.md)
