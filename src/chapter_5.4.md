@@ -85,24 +85,13 @@ user@Phytium-Pi:~$ sudo cat /proc/iomem
 
 
 
-## 关于 PCIe 总线的初始化
+## 接管控制权
 
+1. 加载ArceOS:通过SD卡等引导设备实现
 
-### 相关寄存器介绍
+2. ArceOS初始化：内核开始初始化硬件和各种子系统。在初始化过程中，会尝试检测和配置已经初始化的PCIe控制器。
 
-
-### 具体实例（Linux系统）
-
-
-```shell
-[    0.819462] pci-host-generic 40000000.pcie: host bridge /soc/pcie@40000000 ranges:
-[    0.827065] pci-host-generic 40000000.pcie:    IO 0x50000000..0x50efffff -> 0x00000000
-[    0.834988] pci-host-generic 40000000.pcie:   MEM 0x58000000..0x7fffffff -> 0x58000000
-[    0.842907] pci-host-generic 40000000.pcie:   MEM 0x1000000000..0x1fffffffff -> 0x1000000000
-[    0.851382] pci-host-generic 40000000.pcie: ECAM at [mem 0x40000000-0x4fffffff] for [bus 00-ff]
-[    0.860167] pci-host-generic 40000000.pcie: PCI host bridge to bus 0000:00
-[    0.867040] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    0.872525] pci_bus 0000:00: root bus resource [io  0x0000-0xefffff]
-[    0.878876] pci_bus 0000:00: root bus resource [mem 0x58000000-0x7fffffff]
-[    0.885748] pci_bus 0000:00: root bus resource [mem 0x1000000000-0x1fffffffff]
-```
+3. PCIe子系统初始化：当识别到PCIe控制器后，PCIe子系统会被初始化。其中包括
+   * 设备检测
+   * 资源分配
+   * 设备驱动程序加载
