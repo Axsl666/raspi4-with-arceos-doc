@@ -1,6 +1,6 @@
 # 实验一：PCIe初始化
 
-PCIe控制器由Uboot初始化，会用到pci-generic-ecam这个驱动，这个驱动会在启动的时候检查控制器是否被初始化来决定要不要进行操作。
+PCIe控制器由Uboot初始化。
 
 ## 飞腾派Linux中关于 PCIe 部分
 
