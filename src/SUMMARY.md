@@ -33,7 +33,7 @@
   - [实验一：PCIe 初始化，接管 PCIe 控制器](./chapter_5.4.md)
   - [实验二：PCIe 读取 xhci 控制器](./chapter_5.5.md)
   - [USB 介绍](./chapter_5.6.md)
-  - [实验三：xhci 控制器初始化](./chapter_5.7.md)
+  - [实验三：xhci 控制器初始化，接管 USB 控制器](./chapter_5.7.md)
   - [实验四：读取 USB 设备](./chapter_5.8.md)
 - [方向二：飞腾派 I2C 驱动](./chapter_5.9.md)
   - [I2C 介绍](./chapter_5.17.md)
