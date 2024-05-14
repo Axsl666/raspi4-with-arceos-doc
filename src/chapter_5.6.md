@@ -11,6 +11,7 @@ USB（Universal Serial Bus，通用串行总线）是一种用于在计算机系
 
 ## 拓扑结构
 
+![image](https://github.com/apengaaa/raspi4-with-arceos-doc/assets/83756052/d54b4bfa-2777-4649-9363-58da081f748f)
 
 
 ## USB host
