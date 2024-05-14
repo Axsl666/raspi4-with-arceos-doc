@@ -37,12 +37,16 @@ USB Host的工作原理是通过发送和接收USB数据包来与USB设备进行
 USB device 可以分为 USB hub 和 USB function。
 
 * USB Hub
+   Hub 提供了一种低成本、低复杂度的 USB 接口扩展方法。HUB 的上行 Port 面向Host，下行 Port 面向设备(Hub 或功能设备)。在下行 Port 上，Hub 提供了设备连接检测和设备移除检测的能力，并给各下行 Port 供电。Hub 可以单独使能各下行 Port。
 
-Hub 提供了一种低成本、低复杂度的 USB 接口扩展方法。HUB 的上行 Port 面向Host，下行 Port 面向设备(Hub 或功能设备)。在下行 Port 上，Hub 提供了设备连接检测和设备移除检测的能力，并给各下行 Port 供电。Hub 可以单独使能各下行 Port。
+ 
+
 
 * USB function
+  能够通过总线传输或接收数据或控制信息的设备
+  
 
-能够通过总线传输或接收数据或控制信息的设备
+
 
 
 
