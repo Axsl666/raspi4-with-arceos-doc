@@ -10,7 +10,8 @@
 
 2. ArceOS初始化：内核开始初始化硬件和各种子系统。在初始化过程中，会尝试检测和配置已经初始化的 USB 控制器。
 
-3. USB 子系统初始化：当操作系统识别到USB控制器后，USB子系统会被初始化。包括
-   * 设备检测
-   * 地址分配
-   * 设备驱动程序加载
+代码地址：<https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port>
+
+
+
+
