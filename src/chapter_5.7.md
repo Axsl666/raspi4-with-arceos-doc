@@ -12,6 +12,10 @@
 
 代码地址：<https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port>
 
+从飞腾派软件编程手册V1.0中5.4.2关于USB寄存器基地址可知，USB基地址为：0x31A0_0000
 
+但是，注意 XHCI 协议规范定义寄存器基地址为USB3.0寄存器基地址+0x8000，所以最终基地址为0x31A0_8000
+
+因此，我们在尝试注册 xhci 控制器时，传入的
 
 
