@@ -61,20 +61,15 @@ I2C 操作说明：
 
    5. 读最后一个字节数据时要加上停止信号，即除了向0x10（IC_DATA_CMD）的bit[8]仍写1表示读以外，向bit[9]写1表示停止。
   
-5. I2C 寄存器列表
+5. I2C 部分寄存器：
   
  | Name | Offset | Description |
 |-------|-------|-------|
 | IC_CON | 0x00 | I2C控制寄存器 |
-| IC_TAR |  0x04 | I2C主机地址寄存器 |
-| IC_SAR |  0x08 | I2C从机地址寄存器 |
-| 0x0c | GPFSEL3 | GPIO Function Select 3 |
-| 0x10 | GPFSEL4 | GPIO Function Select 4 |
-| 0x14 | GPFSEL5 | GPIO Function Select 5 |
-| 0xe4 | GPIO_PUP_PDN_CNTRL_REG0 | GPIO Pull-up / Pull-down Register 0 |
-| 0xe8 | GPIO_PUP_PDN_CNTRL_REG1 | GPIO Pull-up / Pull-down Register 1 |
-| 0xec | GPIO_PUP_PDN_CNTRL_REG2 | GPIO Pull-up / Pull-down Register 2 |
-| 0xf0 | GPIO_PUP_PDN_CNTRL_REG3 | GPIO Pull-up / Pull-down Register 3 |
+| IC_TAR | 0x04 | I2C主机地址寄存器 |
+| IC_DATA_CMD | 0x10 | I2C数据寄存器 |
+| IC_ENABLE | 0x6C | I2C使能寄存器 |
+| IC_STATUS |  0x70 | I2C状态寄存器 |
 
 
 
