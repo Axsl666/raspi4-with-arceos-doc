@@ -1,51 +1,28 @@
-# 飞腾派运行ArceOS
+# 飞腾派参数
 
-1. 硬件准备：
-   * 飞腾派板子
-   
-     ![](assert/飞腾派图片.jpg)
-   
-   * 两张SD卡，一张烧录好Ubuntu系统，一张放ArceOS启动镜像（或U盘）
-   
-   * 读卡器（或U盘）
-   
-   * USB转TTL串口线
-   
-   * ArceOS代码地址：<https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port>（注意分支）
-     
-     编译镜像命令：`make A=apps/cli PLATFORM=aarch64-phytium-pi LOG=debug`
-   
-2. 飞腾派上电启动，把有ArceOS启动镜像的读卡器或者U盘插到飞腾派上，用串口把飞腾派与电脑相连接，启动电脑上的远程连接软件，如Putty，波特率设置为115200
+![image-20240427150628174](assert/飞腾派图片.jpg)
 
-   串口接法：接8、10、12号引脚位置，如图所示（8号代表TX，接RX；10号代表RX，接TX；12号接地线）
-
-   ![](assert/飞腾派串口连接示意图.jpg)
-
-3. 在uboot倒计时结束前按任意键进入手动引导
-   * 输入`usb start` ,启用USB驱动来识别插入的USB设备（读卡器/U盘）
-   
-     ![](assert/飞腾派启动ArceOS-1.png)
-   
-   * 输入`fatload usb 0 0x90100000 cli_aarch64-phytium-pi.bin`，从插入的USB设备（读卡器/U盘）上下载ArceOS镜像
-   
-     ![](assert/飞腾派启动ArceOS-2.png)
-   
-   * 输入`go 0x90100000`加载ArceOS镜像
-   
-     ![](assert/飞腾派启动ArceOS-3.png)
-   
-     （这里是没有开debug）
-   
-   * 便可以看到ArceOS启动成功，进入到了shell界面
-   
-     ![](assert/飞腾派启动ArceOS-3.png)
+| 名称 | 描述 |
+| ----- | ---- |
+| CPU | 飞腾四核处理器，ARMV8架构，2 × FTC664@1.8GHz+2 × FTC310@1.5GHz |
+| 内存 | 64位DDR4，分2G版本和4G版本 |
+| 硬盘 | 支持microSD和EMMC启动，二选一 |
+| 网络 | 2 × 千兆以太网（RJ45） |
+| USB | 1 × USB3.0 host，3 × USB2.0 host（键鼠） |
+| PCIe | 1 × Mini—PCIe、支持AI加速、4G/5G通信、MSATA固态硬盘等模块 |
+| 蓝牙 | 蓝牙BT4.2/BLE4.2 |
+| WIFI | 2.4G + 5G双频WIFI |
+| 显示 | 1 × HDMI，支持分辨率1920*1080 |
+| 音频 | 3.5mm耳机口输出 |
+| UART | 1 ×调试串口 + 2 × MIO（可配置多功能IO口为UART模式） |
+| I2C | 2 + 2 × MIO（可配置多功能IO口为I2C模式） |
+| I2S | 1路 |
+| SPI | 2路 |
+| CAN | 1路CANFD |
+| GPIO | 最多29个 |
 
 
-
-
-
-
-
+![](assert/飞腾派.png)
 
 
 
