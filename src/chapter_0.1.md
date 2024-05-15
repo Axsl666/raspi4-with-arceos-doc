@@ -22,5 +22,5 @@
  
   *  传感器驱动，实现颜色跟随中与颜色保持一定的距离
  
-![image](https://github.com/apengaaa/raspi4-with-arceos-doc/assets/83756052/cbe8f1f5-cda8-4735-a5bf-c824a84c1b2e)
+
 
