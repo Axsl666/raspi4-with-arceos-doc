@@ -5,7 +5,11 @@
    
      ![](assert/飞腾派图片.jpg)
    
-   * 两张SD卡，一张烧录好Ubuntu系统，一张放ArceOS启动镜像（或U盘）
+   * 两张SD卡，一张烧录好Ubuntu系统或者放BootLoader和dtb，一张放ArceOS启动镜像（或U盘）
+
+     * Bootloader位置：<https://gitee.com/phytium_embedded/phytium-pi-os/tree/master/package/phyuboot/src>
+
+     * dtb位置：<https://gitee.com/phytium_embedded/phytium-linux-kernel/blob/linux-5.10/arch/arm64/boot/dts/phytium/phytiumpi_firefly.dts>
    
    * 读卡器（或U盘）
    
@@ -15,7 +19,8 @@
      
      编译镜像命令：`make A=apps/cli PLATFORM=aarch64-phytium-pi LOG=debug`
 
-     或者参考：<https://gitee.com/phytium_embedded/phytium-pi-os/wikis/%E9%9D%9E%E9%A3%9E%E8%85%BE%E6%B4%BEOS%E7%9A%84SD%E5%8D%A1%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C>，直接制作SD卡镜像
+
+或者参考：<https://gitee.com/phytium_embedded/phytium-pi-os/wikis/%E9%9D%9E%E9%A3%9E%E8%85%BE%E6%B4%BEOS%E7%9A%84SD%E5%8D%A1%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C>，直接制作SD卡镜像
    
 2. 飞腾派上电启动，把有ArceOS启动镜像的读卡器或者U盘插到飞腾派上，用串口把飞腾派与电脑相连接，启动电脑上的远程连接软件，如Putty，波特率设置为115200
 
