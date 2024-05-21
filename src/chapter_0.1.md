@@ -21,6 +21,13 @@
   *  Python库的支持，实现支持颜色识别需要用到的python库
  
   *  传感器驱动，实现颜色跟随中与颜色保持一定的距离
+
+
+ # 时间安排
+
+ ![image](https://github.com/chenlongos/raspi4-with-arceos-doc/assets/83756052/117f1507-75fa-4ddb-8b8d-0b264cd6a356)
+
+  
  
 
 
