@@ -1,6 +1,6 @@
 # 实验一：飞腾派 Uboot 启动 USB
 
-输入`usb start`后可以看到如下输出：
+在飞腾派Uboot界面，输入`usb start`后可以看到如下输出：
 
 ```shell
 starting USB...
@@ -16,7 +16,7 @@ scanning bus usb3@31a20000 for devices... 1 USB Device(s) found
 
 ```
 
-发现共有两个USB设备被发现，为两个USB主机控制器
+发现USB控制器初始化成功，端口也完成注册，同时扫描两个USB控制器，发现两个USB设备
 
 输入`usb tree`也可以看到：
 
