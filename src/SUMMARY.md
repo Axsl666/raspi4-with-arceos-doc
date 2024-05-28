@@ -27,7 +27,8 @@
 
 - [飞腾派学习指南](./chapter_0.1.md)
   - [飞腾派参数](./chapter_5.0.md)
-  - [前置实验：飞腾派运行ArceOS](./chapter_5.1.md)
+  - [实验一：飞腾派运行ArceOS](./chapter_5.1.md)
+  - [实验二：飞腾派运行Dora-rs](./chapter_5.19.md)
 - [第一阶段--方向一：飞腾派 USB 驱动](./chapter_5.2.md)
   - [PCIe 介绍](./chapter_5.3.md)
   - [实验一：PCIe 初始化，接管 PCIe 控制器(选做)](./chapter_5.4.md)
