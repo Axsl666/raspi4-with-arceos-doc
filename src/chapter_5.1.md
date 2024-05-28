@@ -16,6 +16,8 @@
    * USB转TTL串口线
    
    * ArceOS代码地址：<https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port>（注意分支）
+  
+     `git clone -b phytium_pi_port git@github.com:arceos-usb/arceos_experiment.git`
      
      编译镜像命令：`make A=apps/cli PLATFORM=aarch64-phytium-pi LOG=debug`
 
