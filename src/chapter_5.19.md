@@ -36,8 +36,83 @@
 
 ### Python Conversation
 
-https://dora-rs.ai/zh-CN/docs/guides/getting-started/conversation_py
+<https://dora-rs.ai/zh-CN/docs/guides/getting-started/conversation_py>
 
+1. 创建一个新的数据流
+   ```shell
+   dora new conversation_py --lang python
+   cd conversation_py
+   ```
+2. 添加一个新的节点
+   ```shell
+    dora new --kind custom-node talker
+   ```
+3. 在创建的新节点里创建并编辑talker.py
+
+   加入以下内容：
+   ```shell
+   from dora import Node
+   import pyarrow as pa
+
+   node = Node()
+
+   event = node.next()
+   if event["type"] == "INPUT":
+       print(
+           f"""Node received:
+       id: {event["id"]},
+       value: {event["value"]},
+       metadata: {event["metadata"]}"""
+       )
+   node.send_output("speech", pa.array(["Hello World"])) # add this line
+   ```
+
+4. 调整监听节点
+
+   将node_1的名称更改为listener， 将node_1.py的名称更改为listener.py
+
+   内容变为：
+
+   ```shell
+   from dora import Node
+   import pyarrow as pa
+
+   node = Node()
+
+   event = node.next()
+   if event["type"] == "INPUT":
+       message = event["value"][0].as_py()
+       print(
+           f"""I heard {message}"""
+       )
+   ```
+5. 修改dataflow.yml文件
+
+   变为：
+   ```shell
+   nodes:
+     - id: talker
+       custom:
+         source: talker/talker.py
+         inputs:
+           tick: dora/timer/secs/1
+         outputs:
+           - speech
+
+     - id: listener
+       custom:
+         source: listener/listener.py
+         inputs:
+           speech: talker/speech
+   ```
+ 
+之后在终端运行：
+
+```shell
+dora up
+dora start dataflow.yml --name conversation
+dora logs conversation listener
+```
 结果：
 
 ```shell
