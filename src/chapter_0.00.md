@@ -23,3 +23,5 @@
 7. OSDEV 论坛-PCI 协议教程：<https://wiki.osdev.org/PCI#Base_Address_Registers>
 
 8. PCIE 简明教程：<https://blog.csdn.net/u013253075/article/details/80835831>
+
+9. 飞腾派I2C：<https://www.xcc.com/planet/post/3197>
