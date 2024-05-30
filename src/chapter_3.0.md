@@ -71,6 +71,6 @@
             * dcbaap，是xhci的一个寄存器，其值由我们配置为指向dcbaa的地址，xhci正是通过这个寄存器来知道/控制设备的配置状态的。
 * 好吧，能将整个流程完整的描述一遍吗？我是指程序上？
 * 答：从[这里](https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port/crates/driver_usb/guide/../src/lib.rs)的try_init函数入手，这是整个驱动的入口，同时辅以xhci文档的第四章来确定你当前看的是哪一步。同时也可以参考[飞腾派的官方嵌入式sdk](https:/gitee.com/phytium_embedded/phytium-standalone-sdk)
-    * 经过与官方沟通的最新进展，sdk中的xhci并不稳定且正确，详细的请参考[沟通记录](),因此，请转而参考他们的freertos仓库。
+    * 经过与官方沟通的最新进展，sdk中的xhci并不稳定且正确，详细的请参考[沟通记录](https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port/crates/driver_usb/question/question_5_29.md),因此，请转而参考他们的freertos仓库。
 * 行！那么目前还需要干什么？
 * 参考[问题文件夹](https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port/crates/driver_usb/guide/../question)，其中是与飞腾官方所沟通的一些问题，也是我们驱动目前需要解决的问题，如果有新问题，也请加进去。
