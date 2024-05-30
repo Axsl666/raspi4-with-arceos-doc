@@ -49,7 +49,7 @@ USB device 可以分为 USB hub 和 USB function。
 * 什么是xhci?
 * 答: xhci是USB的控制器, USB1.0的控制器是UHCI/OHCI, 2.0是EHCI, EHCI不向下兼容1.0, 直到USB3.0的XHCI出现，统一了操作标准
 * 具体的来说，有没有参考资料？
-* 答：有，之后整理好群里打包发
+* 答：[参考资料](https://chenlongos.com/raspi4-with-arceos-doc/chapter_0.00.html)
 * XHCI可以做什么？
 * 答：分为两部分，首先XHCI控制器负责整个USB系统的数据与其他内存空间的交互，其次，XHCI控制器负责控制USB设备
     * 追问：控制和传输，有区别吗？
