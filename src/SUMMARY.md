@@ -35,6 +35,7 @@
   - [实验二：PCIe 读取 xhci 控制器（选做）](./chapter_5.5.md)
   - [USB 介绍](./chapter_5.6.md)
   - [ArceOS-USB部分代码导读](./chapter_5.20.md)
+  - [USB最新进展](./chapter_5.21.md)
   - [实验一：飞腾派 Uboot 启动 USB](./chapter_5.18.md)
   - [实验二：xhci 控制器初始化，接管 USB 控制器](./chapter_5.7.md)
   - [实验三：读取 USB 设备，并完成一个无线鼠标的设备驱动](./chapter_5.8.md)
