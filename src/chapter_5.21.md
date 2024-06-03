@@ -1,6 +1,6 @@
 # USB最新进展
 
-可以读取到设备描述符
+可以读取到描述符：
 ```shell
 arceos# test_xhci
 [ 47.250961 0:2 driver_usb::host::xhci:49] resetting xhci controller
