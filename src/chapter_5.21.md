@@ -199,57 +199,57 @@ arceos#
 
 ### 配置描述符 (Configuration Descriptor)
 
-1. length: 9
+1. **length: 9**
    * 描述符的长度为9字节。
 
-2. ty: 2
+2. **ty: 2**
    * 描述符类型为2，表示这是一个配置描述符。
 
-3. total_length: 44
+3. **total_length: 44**
    * 该配置所包含的所有描述符的总长度为44字节。
 
-4. num_interfaces: 1
+4. **num_interfaces: 1**
    * 该配置包含1个接口。
 
-5. config_val: 1
+5. **config_val: 1**
    * 该配置的值为1，用于设置该配置。
 
-6. config_string: 0
+6. **config_string: 0**
    * 配置字符串描述符的索引，值为0表示没有字符串描述符。
 
-7. attributes: 128
+7. **attributes: 128**
    * 配置的属性，128表示总线供电。
 
-8. max_power: 37
+8. **max_power: 37**
    * 设备所需的最大功率，单位为2mA，所以这里是74mA。
 
 ### 接口描述符 (Interface Descriptor)：
 
-1. len: 9
+1. **len: 9**
    * 描述符的长度为9字节。
 
-2. descriptor_type: 4
+2. **descriptor_type: 4**
    * 描述符类型为4，表示这是一个接口描述符。
 
-3. interface_number: 0
+3. **interface_number: 0**
    * 接口编号为0。
 
-4. alternate_setting: 0
+4. **alternate_setting: 0**
    * 备用设置编号为0。
 
-5. num_endpoints: 2
+5. **num_endpoints: 2**
    * 该接口有2个端点（不包括端点0）。
 
-6. interface_class: 8
+6. **interface_class: 8**
    * 接口类代码为8，表示该接口属于大容量存储类。
 
-7. interface_subclass: 6
+7. **interface_subclass: 6**
    * 接口子类代码为6，表示SCSI传输命令集。
 
-8. interface_protocol: 80
+8. **interface_protocol: 80**
    * 接口协议代码为80，表示Bulk-Only传输。
 
-9. interface: 0
+9. **interface: 0**
    * 接口字符串描述符的索引，值为0表示没有字符串描述符。
 
 ### 端点描述符 (Endpoint Descriptor)：
