@@ -30,7 +30,7 @@
  ![image](https://github.com/chenlongos/raspi4-with-arceos-doc/assets/83756052/117f1507-75fa-4ddb-8b8d-0b264cd6a356)
 
  
-![image](https://github.com/chenlongos/raspi4-with-arceos-doc/assets/83756052/b7cb0191-fb9a-44a1-8cac-3fcd4cffdb07)
+<image src = https://github.com/chenlongos/raspi4-with-arceos-doc/assets/83756052/b7cb0191-fb9a-44a1-8cac-3fcd4cffdb07 width=50% />
 
  相关数据手册：
  1. <https://pan.baidu.com/s/1pStiyqohrB3SxHAFFk8R6Q?pwd=dzdv>  提取码：dzdv
