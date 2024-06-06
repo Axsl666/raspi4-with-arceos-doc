@@ -23,4 +23,29 @@
 | 无线手柄 | 121             | 294                 |
 | 摄像头（U20-CAM-1080P） | 12943             | 115                 |
 
+```shell
+U盘（爱国者）：
+
+[ 27.176312 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 0, subclass: 0, protocol: 0, max_packet_size0: 64, vendor: 2316, product_id: 4096, device: 4352, manufacture: 1, product: 2, serial_number: 3, num_configurations: 1 })]
+
+键盘（京东京造）:
+
+[ 29.586200 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 0, subclass: 0, protocol: 0, max_packet_size0: 64, vendor: 1452, product_id: 591, device: 259, manufacture: 1, product: 2, serial_number: 0, num_configurations: 1 })]
+
+鼠标（罗技G502）：
+
+[ 31.996362 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 0, subclass: 0, protocol: 0, max_packet_size0: 64, vendor: 1133, product_id: 49291, device: 9987, manufacture: 1, product: 2, serial_number: 3, num_configurations: 1 })]
+
+摄像头（U20-CAM-1080P）：
+
+[ 34.983512 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 239, subclass: 2, protocol: 1, max_packet_size0: 64, vendor: 12943, product_id: 115, device: 256, manufacture: 2, product: 1, serial_number: 3, num_configurations: 1 })]
+
+无线手柄：
+
+[ 29.809112 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 272, class: 0, subclass: 0, protocol: 0, max_packet_size0: 8, vendor: 121, product_id: 294, device: 4099, manufacture: 0, product: 2, serial_number: 0, num_configurations: 1 })]
+
+无线鼠标（罗技M650）：
+
+[ 31.094196 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 0, subclass: 0, protocol: 0, max_packet_size0: 64, vendor: 1133, product_id: 50504, device: 1281, manufacture: 1, product: 2, serial_number: 0, num_configurations: 1 })]
+```
 
