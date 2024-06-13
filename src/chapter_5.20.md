@@ -4,9 +4,9 @@
 我们从入口开始：
 
 ## 入口
-首先，目前在开发阶段，我们暂时选择不让系统在开机时自动进行驱动的初始化，转而由我们手动触发，因此，我们首先修改[命令行界面](../../../apps/cli/)
+首先，目前在开发阶段，我们暂时选择不让系统在开机时自动进行驱动的初始化，转而由我们手动触发，因此，我们首先修改[命令行界面](https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port/apps/cli)
 
-首先，修改cli crate的[Cargo.toml](../../../apps/cli/Cargo.toml)
+首先，修改cli crate的[Cargo.toml](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/apps/cli/Cargo.toml)
 
 ```toml
 #...
@@ -26,7 +26,7 @@ xhci = "0.9" # +
 #...
 ```
 
-在添加了driver_usb这个crate后，我们就可以在代码中直接调用[驱动中的函数](../../../apps/cli/src/cmd.rs)
+在添加了driver_usb这个crate后，我们就可以在代码中直接调用[驱动中的函数](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/apps/cli/src/cmd.rs)
 
 ```rust
 //...
@@ -106,7 +106,7 @@ fn do_ldr(args: &str) { //顺便优化一下do_ldr，来让我们读内存更方
 //...
 ```
 
-接下来，让我们直接转到[driver_usb crate](../../../crates/driver_usb/),看看驱动到底是怎么运作的。
+接下来，让我们直接转到[driver_usb crate](https://github.com/arceos-usb/arceos_experiment/tree/phytium_pi_port/crates/driver_usb),看看驱动到底是怎么运作的。
 
 ```zsh
 [4.0K]  ./
@@ -157,7 +157,7 @@ fn do_ldr(args: &str) { //顺便优化一下do_ldr，来让我们读内存更方
 └── [1.7K]  Cargo.toml
 ```
 
-首先可以关注[lib.rs](../src/lib.rs),在这里，我们参考飞腾派官方提供的信息，选择第一个XHCI控制器，其地址为0x31a0_8000,在这里我们加上了虚拟地址的前缀：0xffff_0000,但是由于arceos在映射mmio区域时，采取的是1：1映射，因此这个地址仍然指向0x31a0_8000，同时事实上我们也可以直接访问0x31a0_8000来访问控制器。
+首先可以关注[lib.rs](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/crates/driver_usb/src/lib.rs),在这里，我们参考飞腾派官方提供的信息，选择第一个XHCI控制器，其地址为0x31a0_8000,在这里我们加上了虚拟地址的前缀：0xffff_0000,但是由于arceos在映射mmio区域时，采取的是1：1映射，因此这个地址仍然指向0x31a0_8000，同时事实上我们也可以直接访问0x31a0_8000来访问控制器。
 ```rust
 //...
 pub fn try_init() {
@@ -169,7 +169,7 @@ pub fn try_init() {
 * 答：操作系统课上老师会告诉你虚拟内存的概念，现代的计算机系统，为了上层应用的方便，都会将硬件/数据/指令，统一编址进同一片内存空间中，而开发人员能见到的就是这片空间，在这片内存空间中，映射至硬件的内存区域，就被称为MMIO区域(Memory IO)，通过MMIO区域，我们可以直接访问硬件的寄存器。
   
 ## 深入
-接下来，让我们往里细看，看看这个函数中具体做了什么，追根溯源，最终可以追踪到[xhci](../src/host/xhci/mod.rs)这个module
+接下来，让我们往里细看，看看这个函数中具体做了什么，追根溯源，最终可以追踪到[xhci](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/crates/driver_usb/src/host/xhci/mod.rs)这个module
 ```rust
 pub(crate) fn init(mmio_base: usize) {
     unsafe {
@@ -241,7 +241,7 @@ pub(crate) fn init(mmio_base: usize) {
 
 ## 达成成就-我们需要再深入点
 
-接下来让我们直接看看[设备枚举的过程](../src/host/structures/xhci_roothub.rs)吧
+接下来让我们直接看看[设备枚举的过程](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/crates/driver_usb/src/host/structures/xhci_roothub.rs)吧
 ```rust
 // 定义静态变量ROOT_HUB，用于存储根集线器的实例--我们之后要把所有的此类单例模式改写，因为有些计算机系统中有多个xhci控制器，目前重构进度位于phytium_pi_dev分支，任务处于暂停状态，目前不用关心
 pub(crate) static ROOT_HUB: OnceCell<Spinlock<Roothub>> = OnceCell::uninit();
@@ -274,7 +274,7 @@ impl Roothub {
 }
 ```
 
-于是，我们转而去查看[RootPort::initialize方法](../src/host/structures/root_port.rs)
+于是，我们转而去查看[RootPort::initialize方法](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/crates/driver_usb/src/host/structures/root_port.rs)
 ```rust
 //...
     pub fn initialize(&mut self) { //从这里开始，我们就要转而查看规范文档4.3章所描写的关于设备初始化的部分了
@@ -310,7 +310,7 @@ impl Roothub {
 ```
 
 ## 达成成就-结束了？
-让我们看看[这个设备的initialize方法](../src/host/structures/xhci_usb_device.rs)是个怎么回事？
+让我们看看[这个设备的initialize方法](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_port/crates/driver_usb/src/host/structures/xhci_usb_device.rs)是个怎么回事？
 ```rust
 //... 从这里开始，就是正在施工的部分了
 //我是指，我们正在折腾的部分，你已经跟上了项目最新的进度
@@ -378,7 +378,7 @@ impl Roothub {
 
 ## 入口
 
-目前，我们暂时抛弃了原来的 cli 手动启动，而是将 usb 模块的引导做成了一个[app](../../../apps/usb/src/main.rs)：
+目前，我们暂时抛弃了原来的 cli 手动启动，而是将 usb 模块的引导做成了一个[app](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_dev/apps/usb/src/main.rs)：
 
 ```rust
 
@@ -411,7 +411,7 @@ fn main() {
 }
 ```
 
-让我们看看[USBHostConfig](../src/host/mod.rs)里有什么：
+让我们看看[USBHostConfig](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_dev/crates/driver_usb/src/host/mod.rs)里有什么：
 
 ```rust
 #[derive(Clone)]
@@ -425,7 +425,7 @@ where O: OsDep
 }
 ```
 
-接下来，是与我们曾经的代码逻辑相似的 USBHost(XHCI)初始化流程,也就是[USBHost::new](../src/host/xhci/mod.rs)方法,这部分所做事情与移植之前相差不大，请读者自行比对理解。
+接下来，是与我们曾经的代码逻辑相似的 USBHost(XHCI)初始化流程,也就是[USBHost::new](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_dev/crates/driver_usb/src/host/xhci/mod.rs)方法,这部分所做事情与移植之前相差不大，请读者自行比对理解。
 
 ## 深入
 
@@ -476,7 +476,7 @@ where O: OsDep
 
 设备描述符是设备所包含的描述信息，在这里，我们一次性获取所有的描述符信息，并在需要的时候获取对应条目的描述符
 
-设备描述符有许多种类，不同的种类描述了不同的信息，比如 device 就可能会包含设备的厂家/设备的类型等信息，[参考](../src/host/usb/descriptors/mod.rs):
+设备描述符有许多种类，不同的种类描述了不同的信息，比如 device 就可能会包含设备的厂家/设备的类型等信息，[参考](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_dev/crates/driver_usb/src/host/usb/descriptors/mod.rs):
 
 ```rust
 #[derive(FromPrimitive, ToPrimitive, Copy, Clone, Debug)]
@@ -545,7 +545,7 @@ impl Descriptor {
 
 在获取到了描述符后，我们要从设备提供的几种配置中选择一种来设置端点（endpoint），参考：[redox 的代码](https://github.com/redox-os/drivers/blob/master/xhcid/src/xhci/scheme.rs#L595)
 
-这部分在我们的代码中应当位于[根据设备描述符查找驱动](../src/host/xhci/xhci_device.rs)时
+这部分在我们的代码中应当位于[根据设备描述符查找驱动](https://github.com/arceos-usb/arceos_experiment/blob/phytium_pi_dev/crates/driver_usb/src/host/xhci/xhci_device.rs)时
 
 ## 任务分解 3-HID 驱动编写-键盘
 
