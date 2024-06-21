@@ -23,6 +23,9 @@
 | MIO14 | 0x000_2803_0000 | 
 | MIO15 | 0x000_2803_2000 | 
 
+![image](https://github.com/chenlongos/raspi4-with-arceos-doc/assets/83756052/ad8433b3-5cd2-4780-8664-01c86312e702)
+
+
 I2C 操作说明：
 
 1. 模式配置：
