@@ -12,6 +12,7 @@
 
 目前进展已经可以读取到插入的 USB 设备的各种描述符，包括设备描述符、配置描述符、接口描述符以及端点描述符，之后要进行的工作就是写四种通信通信协议，包括控制传输、批量传输、同步传输和中断传输。
 
+
 尝试接入不同的 USB 设备，可以发现会读出不一样的厂商号和设备号，例如：
 
 | USB设备     | vendor（厂商号） | product_id（设备号） |
@@ -49,3 +50,77 @@ U盘（爱国者）：
 [ 31.094196 0:2 driver_usb::host::structures::xhci_usb_device:163] dev descriptors: [Device(Device { len: 18, descriptor_type: 1, cd_usb: 512, class: 0, subclass: 0, protocol: 0, max_packet_size0: 64, vendor: 1133, product_id: 50504, device: 1281, manufacture: 1, product: 2, serial_number: 0, num_configurations: 1 })]
 ```
 
+现在已经根据鼠标的描述符成功配置鼠标的端点信息。接下来便是进行中断传输命令。
+
+```shell
+ Device {
+    slot: Slot {
+        route_string: 0,
+        speed: 2,
+        multi_tt: false,
+        hub: false,
+        context_entries: 3,
+        max_exit_latency: 0,
+        root_hub_port_number: 1,
+        number_of_ports: 0,
+        parent_hub_slot_id: 0,
+        parent_port_number: 0,
+        tt_think_time: 0,
+        interrupter_target: 0,
+        usb_device_address: 1,
+        slot_state: Configured,
+    },
+    endpoints: [
+        Endpoint {
+            endpoint_state: Running,
+            mult: 0,
+            max_primary_streams: 0,
+            linear_stream_array: false,
+            interval: 0,
+            max_endpoint_service_time_interval_payload_high: 0,
+            error_count: 3,
+            endpoint_type: Control,
+            host_initiate_disable: false,
+            max_burst_size: 0,
+            max_packet_size: 8,
+            dequeue_cycle_state: true,
+            tr_dequeue_pointer: 2417736145,
+            average_trb_length: 8,
+            max_endpoint_service_time_interval_payload_low: 0,
+        },
+        Endpoint {
+            endpoint_state: Disabled,
+            mult: 0,
+            max_primary_streams: 0,
+            linear_stream_array: false,
+            interval: 0,
+            max_endpoint_service_time_interval_payload_high: 0,
+            error_count: 0,
+            endpoint_type: NotValid,
+            host_initiate_disable: false,
+            max_burst_size: 0,
+            max_packet_size: 0,
+            dequeue_cycle_state: false,
+            tr_dequeue_pointer: 0,
+            average_trb_length: 0,
+            max_endpoint_service_time_interval_payload_low: 0,
+        },
+        Endpoint {
+            endpoint_state: Running,
+            mult: 0,
+            max_primary_streams: 0,
+            linear_stream_array: false,
+            interval: 3,
+            max_endpoint_service_time_interval_payload_high: 0,
+            error_count: 3,
+            endpoint_type: InterruptIn,
+            host_initiate_disable: false,
+            max_burst_size: 0,
+            max_packet_size: 4,
+            dequeue_cycle_state: true,
+            tr_dequeue_pointer: 2417737729,
+            average_trb_length: 0,
+            max_endpoint_service_time_interval_payload_low: 4,
+        },
+```
+根据上述信息可以看出端点0类型为：控制传输，已启用，端点3为中断传输（传输方向：设备到主机），已启用。
